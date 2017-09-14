@@ -15,10 +15,12 @@ import APP from "./config";
 console.info("schema is loaded");
 
 let hitCount = 0;
-let urlStore = [];
+let userStore = [];
 function getFollowers(url) {
-  let x = substr(ur);
-  urlStore.push(x);
+  let x = url.split("/");
+  console.log(x);
+  userStore.push(x[4]);
+  console.log("userStore" + userStore);
 
   const my = `${url}?client_id=${APP.CLIENT_ID}&client_secret=${APP.CLIENT_SECRET}`;
   console.log(++hitCount + ":" + url);
